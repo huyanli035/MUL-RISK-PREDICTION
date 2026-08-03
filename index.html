@@ -27,7 +27,7 @@
 <body>
 <div class="container">
     <h2>🦴 老年髋部骨折术后营养不良风险计算器</h2>
-    <p class="desc">📌 基于四项核心指标评估术后营养不良风险，<strong>风险分为两阶段</strong>：概率 < 0.15 为低风险，≥ 0.15 为高风险。<br>
+    <p class="desc">📌 基于四项核心指标评估术后营养不良风险，<strong>风险分为两阶段</strong>：概率 < 0.14 为低风险，≥ 0.14 为高风险。<br>
     ✨ <strong>赋值规则</strong>：合并症 >4 → 1；出血量 >100 ml → 1；白蛋白 <35 g/L → 1；血红蛋白（男<120，女<110 g/L）→ 1；其余为 0。</p>
     <div style="display:flex; flex-direction:column; gap:5px;">
         <div class="input-group"><label>性别：</label><select id="gender"><option value="0">男性</option><option value="1">女性</option></select></div>
@@ -78,7 +78,7 @@
             if (prob > 1) prob = 1;
             var percent = (prob * 100).toFixed(2);
 
-            // 两阶段风险分级（界值 0.15）
+            // 两阶段风险分级（界值 0.14）
             var levelText, color;
             if (prob < 0.14) {
                 levelText = "🔵 低风险";
